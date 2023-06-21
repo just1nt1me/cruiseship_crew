@@ -24,11 +24,11 @@ st.header('Enter the cruiseship details:')
 st.text('Default values are for Titanic')
 
 # Input features
-weight = st.number_input('Weight of Cruiseship in Tons:', 46428)
+weight = st.number_input('Weight of Cruiseship (Tons):', 46428)
 passengers = st.number_input('Number of passengers:', 2435)
-length = st.number_input('Length of cruiseship in Meters:', 269)
+length = st.number_input('Length of cruiseship (Meters):', 269)
 rooms = st.number_input('Number of rooms:', 840)
 
 if st.button('Predict Crew'):
-    crew = round(model_process(weight, passengers, length, rooms, model, scaler), 0)
-    st.success(f'The predicted number of crew needed is {crew[0]}')
+    crew = model_process(weight, passengers, length, rooms, model, scaler)
+    st.success(f'The predicted number of crew needed is {int(crew[0])}')
