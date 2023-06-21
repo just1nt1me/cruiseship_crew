@@ -24,10 +24,10 @@ st.header('Enter the cruiseship details:')
 st.subheader('Default values are for Titanic')
 
 # Input features
-weight = st.number_input('Weight of Cruiseship (Tons):', 46428)
-passengers = st.number_input('Number of passengers:', 2435)
-length = st.number_input('Length of cruiseship (Meters):', 269)
-rooms = st.number_input('Number of rooms:', 840)
+weight = st.number_input('Weight of Cruiseship (Tons):',  min_value=1, max_value=300000, value=46428)
+passengers = st.number_input('Number of passengers:', min_value=1, max_value=10000, value=2435)
+length = st.number_input('Length of cruiseship (Meters):', min_value=1, max_value=400, value=269)
+rooms = st.number_input('Number of rooms:', min_value=1, max_value=3000, value=840)
 
 if st.button('Predict Crew'):
     crew = model_process(weight, passengers, length, rooms, model, scaler)
