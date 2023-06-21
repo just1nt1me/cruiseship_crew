@@ -1,2 +1,2 @@
 joblib
-pandas as pd
+pandas
