@@ -18,10 +18,10 @@ def model_process(weight, passengers, length, rooms, model, scaler):
 
 # Streamlit app code
 
-st.title("Cruiseship Crew Predictor")
+st.title("Cruiseship Crew Member Predictor")
 st.image("https://cruisepassenger.com.au/wp-content/uploads/2022/03/WOTS-1.png")
 st.header('Enter the cruiseship details:')
-st.text('Default values are for Titanic')
+st.subheader('Default values are for Titanic')
 
 # Input features
 weight = st.number_input('Weight of Cruiseship (Tons):', 46428)
